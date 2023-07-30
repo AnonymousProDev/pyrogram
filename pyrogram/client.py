@@ -864,6 +864,8 @@ class Client(Methods):
 
             session = pyrogram.methods.messages.inline_session.get_session(self, dc_id)
 
+            try:
+
                 r = await session.invoke(
                     raw.functions.upload.GetFile(
                         location=location,
